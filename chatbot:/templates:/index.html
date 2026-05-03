@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Chatbot</title>
+    <meta charset="UTF-8">
+    <style>
+        .msg-box {
+            padding: 12px 16px;
+            border-radius: 16px;
+            max-width: 60%;
+            margin-bottom: 12px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .user {
+            background: #3b52f0;
+            color: white;
+            margin-left: auto;
+        }
+
+        .bot {
+            background: #eef0f4;
+            color: #222;
+            margin-right: auto;
+        }
+
+        #chat {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            height: 70vh;
+            overflow-y: auto;
+            background: #f8fafc;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #eae6e8;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 16px;
+            margin: 0;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            font-weight: 500;
+        }
+
+        .input-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: #ffffff;
+            border-top: 1px solid #ddd;
+        }
+
+        #userInput {
+            flex: 1;
+            padding: 12px 16px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            outline: none;
+        }
+        #sendBtn {
+            padding: 12px 20px;
+            background: #3b52f0;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #sendBtn:hover {
+            background: #2f43c7;
+        }
+
+        .timestamp {
+            font-size: 11px;
+            opacity: 0.6;
+            margin-top: 4px;
+        }
+
+        .typing {
+            font-style: italic;
+            font-size: 13px;
+            color: #666;
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Athena - Research Chatbot</h2>
+
+    <div id="chat"></div>
+
+    <div class="input-area">
+        <input id="userInput" placeholder="Type your message...">
+        <button id="sendBtn" onclick="sendMessage()">Send</button>
+        <button onclick="downloadChat()">Download My Chat</button>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
